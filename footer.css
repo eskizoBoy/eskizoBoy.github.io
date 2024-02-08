@@ -1,0 +1,59 @@
+footer{
+	background: black;
+	height: 235px;
+	width: 100%;
+	font-family: 'Open Sans';
+	padding:10px 0 10px 0;
+	color: white;
+	
+	
+}
+.footer-content{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	position: relative;
+}
+
+.footer-content h3{
+	font-size: 1.8rem;
+	font-weight: 400;
+	text-transform:capitalize ;
+	line-height: 3rem;
+	color: whitesmoke;
+}
+.footer-content p{
+	max-width: 1000px;
+	margin: 10px auto;
+	line-height: 28px;
+	font-size: 14px;
+	color: whitesmoke;
+
+}
+.amen{
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 1rem 0 3rem 0;
+}
+.amen li{
+	margin: 0 10px;
+}
+.amen a {
+	text-decoration: none	;
+	color: white;
+
+}
+
+.amen a i{
+	font-size: 1.1rem;
+	transition: color .4s ease;
+}
+
+.amen a:hover i{
+	color: rgb(156, 221, 241);
+}
+

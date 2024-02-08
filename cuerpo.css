@@ -1,0 +1,540 @@
+
+
+.slider {
+    height: 250px;
+    margin: auto;
+    position: relative;
+    width: 90%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    z-index: 0;
+
+}
+
+.slide-track {
+    display: flex;
+    width: calc(250px * 18);
+    animation: scroll 40s linear infinite;
+}
+
+.slide-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(250px * -9));
+    }
+}
+
+.slide {
+    height: 200px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    perspective: 70px;
+    background: rgba(248, 246, 246, 0.7); /* Adjust the transparency here */
+    overflow: hidden;
+    background-color: white;
+    
+}
+
+img {
+    width: 100%;
+    height: 80%;
+    transition: transform 1s;
+}
+
+img:hover {
+    transform: translateZ(11px);
+    
+}
+
+
+.slider::before,
+.slider::after {
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 2;
+}
+
+.slider::before {
+    left: 0;
+    top: 0;
+}
+
+.slider::after {
+    right: 0;
+    top: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%); /* Cambiado para desvanecer al comienzo */
+}
+
+
+.centrar-boton {
+    display: flex;
+    justify-content: center;
+    margin-top: 2px; /* Puedes ajustar el margen superior según sea necesario */
+    margin-bottom: 8px;
+}
+
+/* Estilos para el botón "Ordenar ya" */
+.boton-ordenar {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(3, 2, 3);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-bottom: 25px;
+    transition: 0.5s;
+}
+
+.boton-ordenar:hover {
+    background-color: rgb(159, 159, 159);
+    color: black;
+    transition: 0.5s;
+    padding: 15px 25px;
+    box-shadow: 10px 5px 5px rgb(46, 44, 44);
+    font-size: 18px;
+}
+/*----------------------------------*/
+.boton-ordenar2 {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(3, 2, 3);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.boton-ordenar2:hover {
+    background-color: rgb(159, 159, 159);
+    color: black;
+    padding: 15px 25px;
+    box-shadow: 10px 5px 5px rgb(46, 44, 44);
+    font-size: 17px;
+    transition: 0.5s;
+    
+}
+
+
+
+/******************************************************************    * 
+
+*/
+
+.tabla {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 1600px;
+}
+
+.articulo {
+    box-sizing: border-box;
+    width: 50%;
+    padding: 0px;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.articulo img {
+    width: 100%;
+    height: 100%;
+
+}
+
+.articulo h4 {
+    justify-content: center;
+    text-align: center;
+    font-size: 74px;
+    border-bottom: 1px solid rgb(16, 14, 12);
+    width: 70%;
+    margin-left: 100px;
+}
+.articulo p{
+    margin-top: 30px;
+
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+
+}
+
+.articulo h5{
+    text-align: center;
+    font-size: 24px;
+    margin-top: 5px;
+}
+.articulo h3 {
+    margin-top: 55px;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+
+
+}
+/*---------------------------------------------*/
+
+
+.carta {
+            width: 60%;
+            height: 380px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            justify-content: center;
+            text-align: center;
+            font-size: 50px;
+        }
+
+        p {
+            margin-top: 40px;
+            color: #666;
+            text-align: center;
+            justify-content: center;
+
+        }
+
+        /*-------------------------------------*/
+
+        .titulo-elogios{
+            padding-top: 50px;
+            font-size: 90px;
+            font-family: 'Berlin Sans FB Demi';
+            color: #000000;
+            border-bottom: 10px rgb(10, 10, 10) solid;
+            position: relative;
+            z-index: 2;
+            width:300px;
+            margin: auto;
+
+        }
+        .titulo-elogios2{
+            border-bottom: 10px rgb(8, 8, 8) solid;
+            position: relative;
+            z-index: 2;
+            width:130px;
+            margin: auto;
+            margin-top: 10px;
+        }
+
+        .elogios {
+            width: 80%;
+            margin: 50px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+       
+
+        .articulox {
+            width: 48%;
+            height: 400px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+
+        .articulox img {
+            width: 40%;
+            height: auto;
+            border-radius: 50%;
+            margin-left:187px;
+            margin-top: 37px;
+        }
+
+        .contenido {
+            padding: 20px;
+        }
+
+        h3 {
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        p {
+            color: #1d1c1c;
+        }
+        
+
+/*--------------------------------------------*/
+
+#video-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80vh;
+  }
+
+  video {
+    min-width: 750px;
+    min-height: 450px;
+    z-index: 2;
+
+  }
+
+  #video-container img{
+    max-width: 250px;
+    max-height: 450px;
+    z-index: 2;
+    border-radius: 20px;
+
+  }
+/* Mision Vision*/
+.eLogios {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(40, 18, 243);
+padding: 5px; /* Añadí un poco de espacio alrededor del contenido */
+background-attachment: fixed;
+height: 350px;
+}
+
+.reviewBox {
+    width: 45%;
+    padding: 30px 20px; /* Ajusté el padding para más altura en la parte superior e inferior */
+    margin: 20px 0;
+/*     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ */    text-align: center; /* Centra el contenido dentro del artículo */
+ transition: 0.5s;
+ overflow: hidden;
+
+}
+.reviewBox:hover{
+    margin-top: 42px;
+    transition: 0.5s;
+}
+
+.reviewBox .Mision {
+    font-size: 50px;
+    color: white;
+}
+
+.reviewContent {
+    text-align: center;
+}
+
+.reviewContent h3 {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.reviewContent p {
+    font-style: italic;
+    color: #f1ebeb;
+    font-size: 20px;
+}
+
+/* Estilos adicionales si es necesario */
+
+
+
+/*------------------------*/
+#map{
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    margin-left: 100px;
+
+}
+
+#mapachelita{
+    width: 600px;
+    height: 450px;
+}
+#Mapa-contacto{
+    margin-bottom: -50px;
+}
+
+/* #Mapa-contacto{
+    font-family: 'French Script MT';
+
+} */
+
+
+/*-----------------------mapa------------------------------------*/
+#map-form{
+    display: flex;
+    justify-content: space-between;
+}
+/*------------------------- menuu--------------------------------------*/
+
+.menuplatos {
+    margin-top: 12px;
+    justify-content: center;
+    text-align: center;
+    font-size: 100px;
+    font-family: 'Bradley Hand ITC';
+
+}
+
+.image-container {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.platos {
+    width: 400px;
+    height: 350px;
+    display: block;
+    filter: brightness(1.1);
+}
+
+.overlay {
+    font-family: 'Century';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    flex-direction: column; /* Acomoda los elementos en columna */
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 28px;
+    text-align: center;
+}
+
+.precio {
+    margin-top: 10px; /* Espacio entre el título y el precio */
+    font-size: 22px;
+    color: wheat;
+}
+
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+
+div{
+    margin: 15px;
+}
+
+table {
+    margin-top: 30px;
+}
+
+/*--------------------------*/
+.sectionELEGIRNOS {
+    text-align: center;
+    padding: 20px;
+    margin-left: 0px;
+    width: 100%;
+}
+
+.subtitulo {
+    font-size: 28px;
+    color: #ffffff;
+    font-family: 'Berlin Sans FB Demi';
+    
+
+}
+
+.titulo {
+    font-size: 56px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-family: 'Berlin Sans FB Demi';
+
+}
+
+.imagenes-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.imagen {
+    margin-top: 10px;
+}
+
+.imagen img {
+    width: 100px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: 100px;
+    border-radius: 50%; /* Para hacer las imágenes redondas, ajusta según sea necesario */
+    object-fit: cover;
+}
+
+.palabra {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.nosotros-icons{
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+}
+/**/
+
+
+
+.efecto-atachment {
+  position: relative;
+  background-image: url('img/platoCeviche.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  margin-bottom: -15px;
+  margin-left: 0px;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.efecto-atachment::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); /* ajusta el valor de alfa según sea necesario */
+  z-index: 1;
+}
+
+.elogios,
+.sectionELEGIRNOS,
+.eLogios,
+.Padre {
+  position: relative;
+  z-index: 2;
+}
